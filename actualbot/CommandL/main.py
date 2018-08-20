@@ -38,7 +38,7 @@ paydetails = OrderedDict(
      ('City', ''), ('Post/zip code', ''), ('Country', ''), ('CardType', ''), ('Cardno', ''),
      ('CardCVV', ''), ('CardMonth', ''), ('CardYear', '')])
 
-categoryList = ['jackets', 'shirts', 'tops_sweaters', 'sweatshirts', 'pants', 'hats', 'bags',
+categoryList = ['jackets', 'shirts', 'tops_sweaters', 'sweatshirts','t-shirts', 'pants', 'hats', 'bags',
                 'accessories', 'shoes', 'skate']
 
 checkedListings = []
@@ -264,7 +264,7 @@ def searchItem(item):
 def openChrome():
     global driver, strict
     #service.start()
-    driver = webdriver.Chrome(executable_path = '/Users/mukundvenkateswaran/Desktop/supremebot/chromedriver')
+    driver = webdriver.Chrome(executable_path = '../../chromedriver')
 
     inp = input('Do you want to use strict item selection? [Y]es/[N]o: ')
     if inp.upper() == 'YES' or inp.upper() == 'Y':
@@ -355,7 +355,7 @@ def selectKeywords():
 
 def selectCategory():
     categoryInput = input(
-        "Select type: jackets, shirts, tops_sweaters, sweatshirts, pants, hats, bags, accessories, shoes, skate\n").lower()
+        "Select type: jackets, shirts, tops_sweaters, t-shirts, sweatshirts, pants, hats, bags, accessories, shoes, skate\n").lower()
     if categoryInput.lower() in categoryList:
         selected = categoryInput.lower()
         print('Selected Category: %s' % (selected))

@@ -26,6 +26,10 @@ Else you enter payment information and chose if you want to save the information
 8. Enter the drop hour e.g. enter 14 for 2:00PM
 **OPTIONAL** open a new tab and login into a google account to try to bypass reCAPTCHA
 9. Keep the bot and the chrome window open and pray to the supreme gods
+
+###Testing
+For testing or to cop at any given time, comment out `returnTime()` in openChrome().
+
 ### Contribution and issues
 If you need help or advice, add danielyc&#35;9114 on discord or send an email to danielyc.moddev@gmail.com
 
