@@ -46,6 +46,7 @@ checkedListings = []
 password = b'insecure password'
 
 
+
 def pause():
     time.sleep(random())
 
@@ -262,7 +263,7 @@ def searchItem(item):
 
 
 def openChrome():
-    global driver, strict
+    global driver, strict, startTime
     #service.start()
     driver = webdriver.Chrome(executable_path = '../../chromedriver')
 
@@ -273,12 +274,14 @@ def openChrome():
         strict = False
 
     returnTime()
+    startTime = datetime.now()
     for it in items:
         searchItem(it)
         
 
 
 def cart():
+    global startTime
     cart = driver.find_elements_by_class_name('checkout')[0]
     cart.click()
 
@@ -343,6 +346,8 @@ def cart():
     #complete.click()
     print("Complete the captcha and confirm the order manually. Thanks for using me ;)")
     print("If this bot helped you make money/cop a nice item, please consider donating to a charity of your choice")
+    print("It took this many seconds:")
+    print(datetime.now() - startTime)
 
 
 def selectKeywords():
